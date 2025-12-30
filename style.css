@@ -1,0 +1,111 @@
+/* ---------- Base ---------- */
+:root {
+  --max-width: 1100px;
+  --text: #111;
+  --muted: #555;
+  --border: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  padding: 18px 20px;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 80px 0 64px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 500;
+  max-width: 900px;
+  margin: 0 0 16px;
+}
+
+.subline {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 760px;
+}
+
+/* ---------- Focus Cards ---------- */
+.focus {
+  padding: 48px 0 72px;
+  border-top: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.site-footer .disclaimer {
+  max-width: 800px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
