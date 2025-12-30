@@ -1,11 +1,79 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Oro Capital Group</title>
+  <meta name="description" content="Oro Capital Group — investing in the people of the Columbia Basin through long-term, disciplined capital allocation." />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Oro Capital Group</h1>
-  <p>Website coming soon.</p>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">Oro Capital Group</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Investing in the people of the Columbia Basin</h1>
+        <p class="subline">
+          A long-term approach to development, private opportunities, and durable holdings
+          rooted in the West Kootenays.
+        </p>
+      </div>
+    </section>
+
+    <section class="focus">
+      <div class="container grid">
+        <div class="card">
+          <h2>Development Projects</h2>
+          <p>
+            Select, fundamentals-driven development initiatives aligned with local needs
+            and long-term value creation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Private Opportunities</h2>
+          <p>
+            Targeted private investments where structure, alignment, and patience
+            are central to the thesis.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Long-Term Holdings</h2>
+          <p>
+            Durable assets held with a multi-year horizon, emphasizing cash flow,
+            resilience, and stewardship.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA section intentionally omitted for now -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> Oro Capital Group · West Kootenays, British Columbia, Canada
+      </p>
+      <p class="disclaimer">
+        This website is for informational purposes only and does not constitute investment advice
+        or an offer to solicit capital.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
