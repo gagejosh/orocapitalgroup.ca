@@ -115,6 +115,56 @@ a { color: inherit; }
   color: var(--text);
 }
 
+/* =========================================
+   Home page background image
+   -----------------------------------------
+   - Uses a real Columbia Basin photo
+   - Kept subtle to preserve minimalist feel
+   - Only affects the index page
+   ========================================= */
+.home-background {
+  /* Background image + soft overlays */
+  background:
+    /* Light neutral overlay for readability */
+    linear-gradient(
+      rgba(255, 255, 255, 0.78),
+      rgba(255, 255, 255, 0.92)
+    ),
+    /* Existing brand gradients (kept subtle) */
+    radial-gradient(
+      900px 450px at 20% 10%,
+      rgba(217, 119, 6, 0.10),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 450px at 80% 0%,
+      rgba(59, 130, 246, 0.08),
+      transparent 55%
+    ),
+    /* Actual photo */
+    url("/assets/columbia-basin.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure content spacing still feels intentional */
+.home-background .hero {
+  padding-top: 96px;
+}
+
+/* Anchor the background image (more river, less sky) */
+background-position: center bottom;
+
+/* Reduce background photo effect on mobile */
+@media (max-width: 700px) {
+  .home-background {
+    background-position: center top;
+  }
+}
+
+
 /* -----------------------------
    Hero (home page)
    ----------------------------- */
