@@ -175,6 +175,19 @@ a { color: inherit; }
   gap: 18px;
 }
 
+/* =========================================
+   Full-width card (used for Contact on home)
+   -----------------------------------------
+   On wide screens, span the entire grid row
+   so a single card doesn't look orphaned.
+   ========================================= */
+@media (min-width: 900px) {
+  .card-full {
+    grid-column: 1 / -1; /* span all columns */
+  }
+}
+
+
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
