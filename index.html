@@ -1,112 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Basic page setup -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- What shows in the browser tab -->
   <title>Oro Capital Group</title>
-
-  <!-- Short description for Google / link previews -->
-  <meta
-    name="description"
-    content="Oro Capital Group — investing in the people of the Columbia Basin through long-term, disciplined capital allocation."
-  />
-
-  <!-- Link to our CSS file (make sure the filename matches exactly) -->
+  <meta name="description" content="Oro Capital Group — investing in the people of the Columbia Basin." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- =========================
-       HEADER (top bar)
-       ========================= -->
+
   <header class="site-header">
     <div class="container">
-      <!-- "Brand" is just text for now; you can swap to a logo later -->
-      <div class="brand">
-        Oro Capital Group
-        <small>West Kootenays · British Columbia</small>
-      </div>
+      <a class="brand" href="/">
+        <img src="assets/logo.svg" alt="Oro Capital Group" />
+        <div>
+          <div class="name">Oro Capital Group</div>
+          <span class="tagline">West Kootenays · British Columbia</span>
+        </div>
+      </a>
 
-      <!-- Optional future navigation (kept for later)
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="/about.html">About</a>
-        <a href="/approach.html">Approach</a>
+        <a href="/development.html">Development</a>
+        <a href="/private.html">Private</a>
+        <a href="/holdings.html">Holdings</a>
         <a href="/contact.html">Contact</a>
       </nav>
-      -->
     </div>
   </header>
 
-  <!-- =========================
-       MAIN CONTENT
-       ========================= -->
   <main>
-    <!-- HERO SECTION (headline + one-liner) -->
     <section class="hero">
       <div class="container">
         <h1>Investing in the people of the Columbia Basin</h1>
-
         <p class="subline">
-          A long-term approach to development, private opportunities, and durable holdings
+          A long-term approach to development projects, private opportunities, and durable holdings
           rooted in the West Kootenays.
         </p>
-
-        <!-- Optional CTA block (kept for later)
-        <div class="cta">
-          <a class="button" href="/contact.html">Get in touch</a>
-          <a class="button ghost" href="/approach.html">Our approach</a>
-        </div>
-        -->
       </div>
     </section>
 
-    <!-- FOCUS CARDS (three columns on desktop, one column on mobile) -->
     <section class="focus">
       <div class="container grid">
-        <!-- Card 1 -->
         <div class="card">
           <h2>Development Projects</h2>
-          <p>
-            Select, fundamentals-driven development initiatives aligned with local needs
-            and long-term value creation.
-          </p>
+          <p>Select, fundamentals-driven projects aligned with local needs and long-term value creation.</p>
         </div>
 
-        <!-- Card 2 -->
         <div class="card">
           <h2>Private Opportunities</h2>
-          <p>
-            Targeted private investments where structure, alignment, and patience
-            are central to the thesis.
-          </p>
+          <p>Targeted investments where alignment, structure, and patience are central to the thesis.</p>
         </div>
 
-        <!-- Card 3 -->
         <div class="card">
           <h2>Long-Term Holdings</h2>
-          <p>
-            Durable assets held with a multi-year horizon, emphasizing cash flow,
-            resilience, and stewardship.
-          </p>
+          <p>Durable assets held with a multi-year horizon, emphasizing resilience and stewardship.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
   <footer class="site-footer">
     <div class="container">
-      <!-- We fill the year with a tiny script below -->
-      <p>
-        © <span id="year"></span> Oro Capital Group · West Kootenays, British Columbia, Canada
-      </p>
-
-      <!-- Simple disclaimer (good practice for anything capital-adjacent) -->
+      <p>© <span id="year"></span> Oro Capital Group · West Kootenays, British Columbia, Canada</p>
       <p class="disclaimer">
         This website is for informational purposes only and does not constitute investment advice
         or an offer to solicit capital.
@@ -114,11 +70,7 @@
     </div>
   </footer>
 
-  <!-- =========================
-       SMALL JS: Auto-update year
-       ========================= -->
   <script>
-    // Finds the element with id="year" and sets it to the current year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
