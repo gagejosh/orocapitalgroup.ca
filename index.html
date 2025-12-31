@@ -1,35 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Basic metadata -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Oro Capital Group</title>
   <meta name="description" content="Oro Capital Group — investing in the people of the Columbia Basin." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
+<body>
+  <!-- =========================================
+       HEADER (shared on every page)
+       ========================================= -->
   <header class="site-header">
     <div class="container">
+      <!-- Brand link -->
       <a class="brand" href="/">
-        <img src="assets/logo.svg" alt="Oro Capital Group" />
-        <div>
+        <img src="/assets/logo.svg" alt="" aria-hidden="true" class="logo" />
+        <div class="brand-text">
           <div class="name">Oro Capital Group</div>
           <span class="tagline">West Kootenays · British Columbia</span>
         </div>
       </a>
 
+      <!-- Updated nav labels to match homepage cards -->
       <nav class="nav" aria-label="Primary navigation">
         <a href="/about.html">About</a>
-        <a href="/development.html">Development</a>
-        <a href="/private.html">Private</a>
-        <a href="/holdings.html">Holdings</a>
+        <a href="/development.html">Development Projects</a>
+        <a href="/private.html">Private Opportunities</a>
+        <a href="/holdings.html">Long-Term Holdings</a>
         <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- =========================================
+       MAIN CONTENT (home page)
+       ========================================= -->
   <main>
+    <!-- Hero section -->
     <section class="hero">
       <div class="container">
         <h1>Investing in the people of the Columbia Basin</h1>
@@ -40,26 +52,35 @@
       </div>
     </section>
 
+    <!-- Focus cards (now clickable links) -->
     <section class="focus">
       <div class="container grid">
-        <div class="card">
+
+        <!-- Card link 1 -->
+        <a class="card card-link" href="/development.html">
           <h2>Development Projects</h2>
           <p>Select, fundamentals-driven projects aligned with local needs and long-term value creation.</p>
-        </div>
+        </a>
 
-        <div class="card">
+        <!-- Card link 2 -->
+        <a class="card card-link" href="/private.html">
           <h2>Private Opportunities</h2>
           <p>Targeted investments where alignment, structure, and patience are central to the thesis.</p>
-        </div>
+        </a>
 
-        <div class="card">
+        <!-- Card link 3 -->
+        <a class="card card-link" href="/holdings.html">
           <h2>Long-Term Holdings</h2>
           <p>Durable assets held with a multi-year horizon, emphasizing resilience and stewardship.</p>
-        </div>
+        </a>
+
       </div>
     </section>
   </main>
 
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Oro Capital Group · West Kootenays, British Columbia, Canada</p>
@@ -70,6 +91,7 @@
     </div>
   </footer>
 
+  <!-- Auto year -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
