@@ -1,111 +1,216 @@
-/* ---------- Base ---------- */
+/* =========================================================
+   STYLESHEET FOR ORO CAPITAL GROUP
+   Beginner-friendly structure:
+   1) Variables (colors, sizes)
+   2) Resets / base styles
+   3) Layout helpers (container)
+   4) Sections (header, hero, cards, footer)
+   5) Responsive tweaks
+   ========================================================= */
+
+/* -----------------------------
+   1) Design variables
+   Change these to adjust the look
+   ----------------------------- */
 :root {
-  --max-width: 1100px;
-  --text: #111;
-  --muted: #555;
-  --border: #e6e6e6;
+  /* Layout */
+  --max-width: 1120px;
+  --radius: 18px;
+
+  /* Colors */
+  --text: #0f172a;       /* main text (slate-900) */
+  --muted: #475569;      /* secondary text (slate-600) */
+  --border: rgba(15, 23, 42, 0.10);
+
+  /* Surfaces / shadows */
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --shadow-sm: 0 8px 18px rgba(2, 6, 23, 0.08);
+  --shadow: 0 12px 30px rgba(2, 6, 23, 0.10);
 }
 
+/* -----------------------------
+   2) Base / reset styles
+   ----------------------------- */
 * {
   box-sizing: border-box;
 }
 
+html,
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  line-height: 1.55;
+  height: 100%;
 }
 
-/* ---------- Layout ---------- */
+body {
+  margin: 0;
+
+  /* System font stack = clean + fast */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  color: var(--text);
+  line-height: 1.55;
+
+  /* A subtle background that feels modern without being loud */
+  background:
+    radial-gradient(900px 450px at 20% 10%, rgba(217, 119, 6, 0.12), transparent 60%),
+    radial-gradient(900px 450px at 80% 0%, rgba(59, 130, 246, 0.10), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 65%, #ffffff 100%);
+}
+
+/* Links inherit color by default (optional preference) */
+a {
+  color: inherit;
+}
+
+/* -----------------------------
+   3) Layout helper: container
+   Keeps content centered and readable
+   ----------------------------- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 22px;
 }
 
-/* ---------- Header ---------- */
+/* -----------------------------
+   4) Header (top bar)
+   Sticky = stays visible while scrolling
+   ----------------------------- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  /* Soft translucent effect */
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.70);
+
   border-bottom: 1px solid var(--border);
 }
 
 .site-header .container {
-  padding: 18px 20px;
+  padding: 18px 22px;
+
+  /* brand on left, (optional nav) on right */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* Brand styling */
 .brand {
-  font-weight: 600;
+  font-weight: 650;
   letter-spacing: 0.3px;
 }
 
-/* ---------- Hero ---------- */
+.brand small {
+  display: block;
+  margin-top: 2px;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+}
+
+/* -----------------------------
+   5) Hero section (headline)
+   ----------------------------- */
 .hero {
-  padding: 80px 0 64px;
+  padding: 86px 0 54px;
 }
 
 .hero h1 {
-  font-size: 42px;
-  font-weight: 500;
-  max-width: 900px;
-  margin: 0 0 16px;
+  /* clamp() automatically scales between min and max sizes */
+  font-size: clamp(34px, 4.2vw, 52px);
+
+  font-weight: 520;
+  letter-spacing: -0.02em;
+
+  margin: 0 0 14px;
+  max-width: 22ch; /* keeps the headline from becoming too wide */
 }
 
 .subline {
+  margin: 0;
+
   font-size: 18px;
   color: var(--muted);
-  max-width: 760px;
+  max-width: 70ch; /* readable line length */
 }
 
-/* ---------- Focus Cards ---------- */
+/* -----------------------------
+   6) Focus cards
+   ----------------------------- */
 .focus {
-  padding: 48px 0 72px;
-  border-top: 1px solid var(--border);
+  padding: 34px 0 78px;
 }
 
+/* 3-column grid on desktop */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
+/* Card styling */
 .card {
+  background: var(--card-bg);
   border: 1px solid var(--border);
-  padding: 24px;
-  border-radius: 14px;
+  border-radius: var(--radius);
+
+  padding: 26px 24px;
+
+  box-shadow: var(--shadow-sm);
+
+  /* Smooth hover effect */
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .card h2 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 500;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .card p {
+  margin: 0;
   color: var(--muted);
-  margin-bottom: 0;
 }
 
-/* ---------- Footer ---------- */
+/* -----------------------------
+   7) Footer
+   ----------------------------- */
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 28px 0;
+  padding: 26px 0;
+
   font-size: 14px;
   color: var(--muted);
 }
 
 .site-footer .disclaimer {
-  max-width: 800px;
-  margin-top: 8px;
+  max-width: 90ch;
+  margin: 10px 0 0;
   font-size: 13px;
 }
 
-/* ---------- Responsive ---------- */
+/* -----------------------------
+   8) Responsive (mobile)
+   ----------------------------- */
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .hero {
+    padding: 72px 0 42px;
   }
 
-  .hero h1 {
-    font-size: 34px;
+  /* Stack cards into one column on smaller screens */
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
