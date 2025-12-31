@@ -1,63 +1,35 @@
 <!-- ==================================================
-     Oro Capital Group Logo
-     Simple black & white mountain mark + wordmark
-     This version is GitHub-preview friendly
+     Oro Capital Group - Logo Mark
+     Mountain-only version (no text)
+     Used in header and future favicon
      ================================================== -->
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 520 120"
-  width="520"
+  viewBox="0 0 220 120"
+  width="220"
   height="120"
 >
 
   <!-- =========================================
        MOUNTAIN ICON
-       Drawn with strokes only (no fills)
+       Stroke-only, black & white
        ========================================= -->
   <g
     fill="none"
     stroke="#0f172a"
-    stroke-width="5"
+    stroke-width="6"
     stroke-linecap="round"
     stroke-linejoin="round"
   >
-    <!-- Left mountain -->
-    <path d="M40 86 L92 28 L144 86" />
+    <!-- Left peak -->
+    <path d="M10 100 L60 30 L110 100" />
 
-    <!-- Right mountain -->
-    <path d="M110 86 L170 44 L230 86" />
+    <!-- Right peak -->
+    <path d="M70 100 L120 50 L180 100" />
 
-    <!-- Ridge detail -->
-    <path d="M88 46 L102 34 L118 52" />
-  </g>
-
-  <!-- =========================================
-       WORDMARK TEXT
-       Uses system fonts (no external dependencies)
-       ========================================= -->
-  <g fill="#0f172a">
-    <!-- Company name -->
-    <text
-      x="255"
-      y="62"
-      font-size="28"
-      font-weight="600"
-      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
-    >
-      Oro Capital Group
-    </text>
-
-    <!-- Location tagline -->
-    <text
-      x="255"
-      y="88"
-      font-size="14"
-      fill="#475569"
-      font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
-    >
-      Columbia Basin · West Kootenays, BC
-    </text>
+    <!-- Small ridge detail -->
+    <path d="M55 55 L70 40 L85 60" />
   </g>
 
 </svg>
