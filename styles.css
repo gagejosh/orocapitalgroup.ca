@@ -234,3 +234,14 @@ ul.clean li { margin: 8px 0; }
   .site-header .container { align-items: flex-start; }
   .nav { justify-content: flex-start; }
 }
+
+/* =========================================
+   Clickable card links (home page)
+   Makes <a class="card"> look like a card, not a blue link
+   ========================================= */
+.card-link {
+  text-decoration: none; /* remove underline */
+  color: inherit;        /* keep normal text color */
+  display: block;        /* make the whole card clickable */
+}
+
